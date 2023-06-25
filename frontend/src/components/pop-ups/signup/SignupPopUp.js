@@ -25,7 +25,7 @@ function SignupPopUp() {
         setLoading(true)
         console.log(user);
         try{
-            const response = await axios.post('https://product-listing-40mx.onrender.com/user/register',user);
+            const response = await axios.post('https://product-feedback-aaxq.onrender.com/user/register',user);
             if(response.data.success === 'false'){
                 console.log(response.data.msg);
             }
@@ -52,7 +52,7 @@ function SignupPopUp() {
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
           <input type="text" name='phone' placeholder='Phone' />
           <input type="text" name='password' placeholder='Password' />
-          <button onClick={submitData}>{(loading)? <Loading/> :'+Add'}</button>
+          <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
         </div>
         <div className="right__container__addproduct__popup">
             <p>Feedback</p>

@@ -31,12 +31,12 @@ function Signup() {
         setLoading(true)
         console.log(user);
         try{
-            const response1 = await axios.post('https://product-listing-40mx.onrender.com/user/register',user);
+            const response1 = await axios.post('https://product-feedback-aaxq.onrender.com/user/register',user);
             const user1 = {
                 email:user.email,
                 password:user.password
             }
-            const response = await axios.post('https://product-listing-40mx.onrender.com/user/login',user1);
+            const response = await axios.post('https://product-feedback-aaxq.onrender.com/user/login',user1);
             if(response1.data.success === 'false'){
                 toast.error(response1.data.msg,{
                     position: toast.POSITION.TOP_CENTER

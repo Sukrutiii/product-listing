@@ -43,7 +43,7 @@ function ProductCardMobile({ product }) {
       if (user.login) {
         const token = localStorage.getItem('token')
         try {
-          await axios.post('https://product-listing-40mx.onrender.com/product/comment', {
+          await axios.post('https://product-feedback-aaxq.onrender.com/product/comment', {
             id: product._id,
             comment: commentData
           }, {
@@ -75,7 +75,7 @@ function ProductCardMobile({ product }) {
     setLoading(true);
     if (user.login) {
       const token = localStorage.getItem('token')
-      await axios.post("https://product-listing-40mx.onrender.com/product/upvote", {
+      await axios.post("https://product-feedback-aaxq.onrender.com/product/upvote", {
         id: product._id
       }, {
         headers: {

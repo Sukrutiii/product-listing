@@ -21,7 +21,7 @@ function App() {
     setLoading(true);
     const token = localStorage.getItem('token');
     if (token) {
-      const response = await axios.get('https://product-listing-40mx.onrender.com/user/verify', {
+      const response = await axios.get('https://product-feedback-aaxq.onrender.com/user/verify', {
         headers: {
           'Authorization': token,
         }
@@ -40,7 +40,7 @@ function App() {
   }
 
   const loadProducts = async () => {
-    const response = await axios.get('https://product-listing-40mx.onrender.com/product');
+    const response = await axios.get('https://product-feedback-aaxq.onrender.com/product');
     const productsData = response.data.products
     const data = {
       productsData: productsData,

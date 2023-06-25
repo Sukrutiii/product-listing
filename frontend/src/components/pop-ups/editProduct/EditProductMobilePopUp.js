@@ -25,7 +25,7 @@ function EditProductPopUp({name,tag,description,id}) {
         console.log(product);
         const token = localStorage.getItem('token');
         try{
-            const response = await axios.put(`https://product-listing-40mx.onrender.com/product/${id}`,product,{
+            const response = await axios.put(`https://product-feedback-aaxq.onrender.com/product/${id}`,product,{
               headers:{
                 'Authorization':token
               }
