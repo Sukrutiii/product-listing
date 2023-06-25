@@ -1,0 +1,46 @@
+
+.filter__main__container__mb{
+    width: 90%;
+    min-height: 20.88px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border-radius: 11.3783px;
+    text-align: start;
+}
+
+.not__selected__filter__mb {
+    display: inline-block;
+    min-width: 10.39px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+    height: 39.88px;
+    vertical-align: middle;
+    line-height: 39px;
+    text-align: center;
+    background: rgba(54, 65, 106, 0.15);
+    border-radius: 25.0428px;
+    cursor: pointer;
+}
+
+
+.selected__filter__mb{
+    display: inline-block;
+    cursor: pointer;
+    min-width: 10.39px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+    vertical-align: middle;
+    line-height: 39px;
+    height: 39.88px;
+    text-align: center;
+    color: white;
+    background-color: #36416A;
+    border-radius: 25.0428px;
+}
+
+

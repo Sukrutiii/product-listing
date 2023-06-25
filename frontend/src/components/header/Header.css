@@ -1,0 +1,30 @@
+.header__container{
+    display: flex;
+    flex-direction: row;
+    background: #36416A;
+    color: white;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header__container > p{
+    font-size: 20px;
+}
+
+.header__subcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__subcontainer__logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.login__signup{
+    cursor: pointer;
+}

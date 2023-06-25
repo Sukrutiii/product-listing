@@ -1,0 +1,21 @@
+
+.home__container__advertise__dk{
+
+}
+
+.home__container__header__dk{
+
+}
+
+.home__container__productlist__dk{
+    display: flex;
+    flex-direction: row;
+}
+
+.home__container__filter__dk{
+    width: 39%;
+}
+
+.home__container__addproduct__productlist__dk{
+    width: 55%;
+}

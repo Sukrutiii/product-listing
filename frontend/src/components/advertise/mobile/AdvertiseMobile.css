@@ -1,0 +1,38 @@
+.advertise__container__mb{
+    display: flex;
+    flex-direction: column;
+}
+
+.advertise__image__mb{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advertise__text__mb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.advertise__text__main__mb{
+    text-align: start;
+}
+
+.advertise__text__sub__mb{
+    text-align: start;
+    margin-top: 0;
+}
+
+.advertise__text__main__mb{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25.5132px;
+    line-height: 147.2%;
+}
+
+.advertise__text__sub__mb{
+    font-size: 15px;
+}
