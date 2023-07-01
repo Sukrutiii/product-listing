@@ -48,11 +48,11 @@ function LoginPopUp() {
     >
       <div className="add__product__popup__container">
         <div className="left__container__addproduct__popup">
-          <p>Login</p>
+          <p>Login to continue</p>
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
           <input type="text" name='password' placeholder='Password' />
           <p className="left_container_link">Don't have an account?<SignupPopUp button_name="Sign up"></SignupPopUp></p> 
-          <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
+          <button onClick={submitData}>{(loading)? <Loading/> :'Login'}</button>
         </div>
         <div className="right__container__addproduct__popup">
             <p>Feedback</p>

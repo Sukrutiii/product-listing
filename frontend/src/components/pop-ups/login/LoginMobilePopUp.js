@@ -52,7 +52,7 @@ function LoginMobilePopUp() {
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
           <input type="text" name='phone' placeholder='Phone' />
           <p className="left_container_link">Don't have an account?<SignupMobilePopUp button_name={"Sign up"}>Sign up</SignupMobilePopUp></p>
-          <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
+          <button onClick={submitData}>{(loading)? <Loading/> :'login'}</button>
         </div>
       </div>
     </Popup>
