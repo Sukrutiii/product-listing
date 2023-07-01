@@ -3,11 +3,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import axios from 'axios'
 import Loading from '../../loading/Loading'
-import { Link, useNavigate } from 'react-router-dom';
-import SignupPopUp from '../signup/SignupPopUp';
+import { useNavigate } from 'react-router-dom';
+import SignupMobilePopUp from '../signup/SignupMobilePopUp';
 
 
-function LoginPopUp() {
+function LoginMobilePopUp() {
   const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
     const [user,setUser] = useState({
@@ -26,7 +26,7 @@ function LoginPopUp() {
         setLoading(true)
         console.log(user);
         try{
-            const response = await axios.post('https://product-feedback-aaxq.onrender.com/user/register',user);
+            const response = await axios.post('https://product-listing-40mx.onrender.com/user/register',user);
             if(response.data.success === 'false'){
                 console.log(response.data.msg);
             }
@@ -47,20 +47,16 @@ function LoginPopUp() {
       nested
     >
       <div className="add__product__popup__container">
-        <div className="left__container__addproduct__popup">
+        <div className="left__container__addproduct__popup__mb">
           <p>Login</p>
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
-          <input type="text" name='password' placeholder='Password' />
-          <p className="left_container_link">Don't have an account?<SignupPopUp button_name="Sign up"></SignupPopUp></p> 
+          <input type="text" name='phone' placeholder='Phone' />
+          <p className="left_container_link">Don't have an account?<SignupMobilePopUp button_name={"Sign up"}>Sign up</SignupMobilePopUp></p>
           <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
-        </div>
-        <div className="right__container__addproduct__popup">
-            <p>Feedback</p>
-            <article>Add your product and rate other items.............</article>
         </div>
       </div>
     </Popup>
   )
 }
 
-export default LoginPopUp
+export default LoginMobilePopUp

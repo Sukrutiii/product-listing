@@ -29,7 +29,7 @@ function AddProductDesktop() {
         </div>
       </div>
       {
-        (login) ? <AddProductPopUp/> : <SignupPopUp/>
+        (login) ? <AddProductPopUp/> : <SignupPopUp button_name="+ Add Product"/>
       }
       
     </div>

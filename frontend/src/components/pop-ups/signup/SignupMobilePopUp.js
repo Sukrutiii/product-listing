@@ -3,10 +3,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import axios from 'axios'
 import Loading from '../../loading/Loading'
+import LoginMobilePopUp from '../login/LoginMobilePopUp';
 import { useNavigate } from 'react-router-dom';
 
 
-function SignupMobilePopUp() {
+function SignupMobilePopUp({button_name}) {
   const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
     const [user,setUser] = useState({
@@ -41,7 +42,7 @@ function SignupMobilePopUp() {
       }
   return (
     <Popup
-      trigger={<button className="button add__product">+ Add Product</button>}
+      trigger={<button className="button add__product">{button_name}</button>}
       modal
       nested
     >
@@ -52,7 +53,8 @@ function SignupMobilePopUp() {
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
           <input type="text" name='phone' placeholder='Phone' />
           <input type="text" name='password' placeholder='Password' />
-          <button onClick={submitData}>{(loading)? <Loading/> :'+Add'}</button>
+          <p className="left_container_link">Already have an account?<LoginMobilePopUp>Login</LoginMobilePopUp></p>
+          <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
         </div>
       </div>
     </Popup>

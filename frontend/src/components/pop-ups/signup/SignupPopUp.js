@@ -3,10 +3,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import axios from 'axios'
 import Loading from '../../loading/Loading'
-import { useNavigate } from 'react-router-dom';
+import LoginPopUp from '../login/LoginPopUp';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-function SignupPopUp() {
+function SignupPopUp({button_name}) {
   const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
     const [user,setUser] = useState({
@@ -41,7 +42,7 @@ function SignupPopUp() {
       }
   return (
     <Popup
-      trigger={<button className="button add__product">+ Add Product</button>}
+      trigger={<button className="button add__product">{button_name}</button>}
       modal
       nested
     >
@@ -52,6 +53,7 @@ function SignupPopUp() {
           <input type="text" name='email' onChange={onChangeInput} placeholder='Email' />
           <input type="text" name='phone' placeholder='Phone' />
           <input type="text" name='password' placeholder='Password' />
+          <p className="left_container_link">Already have an account?<LoginPopUp>Login</LoginPopUp></p> 
           <button onClick={submitData}>{(loading)? <Loading/> :'Submit'}</button>
         </div>
         <div className="right__container__addproduct__popup">

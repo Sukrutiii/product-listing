@@ -31,7 +31,7 @@ function AddProductMobile() {
         </div>
       </div>
       {
-        (login) ? <AddProductMobilePopUp/> : <SignupMobilePopUp/>
+        (login) ? <AddProductMobilePopUp/> : <SignupMobilePopUp button_name="+Add Product"/>
       }
       
     </div>
